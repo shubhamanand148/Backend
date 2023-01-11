@@ -1,6 +1,3 @@
-<h1>Input your Name below</h1>
-<form method="POST" action="count">
-    {% csrf_token %}
-    <textarea name="text"></textarea><br>
-    <input type="Submit"/>
-</form>
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<h1>Word Counter</h1>

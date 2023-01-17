@@ -12,3 +12,4 @@ from django.db import models
 class Feature(models.Model):
     title = models.CharField(max_length=100)
     description = models.CharField(max_length=500)
+    image = models.CharField(max_length=200, default='None')

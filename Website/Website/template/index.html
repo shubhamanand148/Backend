@@ -1,5 +1,11 @@
 {% load static %}
+
 <!DOCTYPE html>
+
+<style>
+  h1{color: white;}
+</style>
+
 <html lang="en">
     <head>
       <!-- basic -->
@@ -59,11 +65,17 @@
                 <a class="nav-link" href="{% static 'contact.html' %}">Contact</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#"><img src="{% static 'images/search-icon.png' %}"></a>
+                <a class="nav-link" href="login" action="login"><img src="{% static 'images/search-icon.png' %}"></a>
               </li>
+              {% if user.is_authenticated %}
               <li class="nav-item active">
-                <a class="nav-link" href="#">LOGIN</a>
-              </li>              
+                <a class="nav-link" href="logout">Hi, {{user.username}} </br> Logout</a>
+              </li>
+              {% else %}
+              <li class="nav-item active">
+                <a class="nav-link" href="login">Login</a>
+              </li>
+              {% endif %}
             </ul>
           </div>
         </nav>
@@ -96,10 +108,10 @@
                 <a class="nav-link" href="{% static 'contact.html' %}">Contact</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#"><img src="{% static 'images/search-icon.png' %}"></a>
+                <a class="nav-link" href="login" action="login"><img src="{% static 'images/search-icon.png' %}"></a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="#">LOGIN</a>
+                <a class="nav-link" href="login" action="login">Login</a>
               </li>              
             </ul>
           </div>
@@ -133,7 +145,7 @@
                         <h1 class="banner_taital">Providing appropritate<br>
                         health care for  
                         <br>seniors and  childrens</h1>
-                        <p class="long_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum</p>
+                        <p class="long_text">It is a long-established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum</p>
                         <div class="btn_main">
                           <div class="about_us"><a href="#">About Us</a></div>
                           <div class="about_bt"><a href="#">Get Appointment</a></div>
@@ -212,32 +224,17 @@
       <div class="services_section layout_padding">
         <div class="container">
           <div class="row">
+            {% for feature in features %}
             <div class="col-lg-4">
               <div class="call_box">
-                <div class="call_image"><img src="{% static 'images/call-icon.png' %}"></div>
+                <div class="call_image"><img src={% static feature.image %}></div>
                 <!-- Feature is a database in model.py file -->
-                <h2 class="emergency_text">{{feature1.title}}</h2>
+                <h2 class="emergency_text">{{feature.title}}</h2>
                 <h1 class="call_text">1-800-400-5768</h1>
-                <p class="dolor_text">{{feature1.description}}</p>
+                <p class="dolor_text">{{feature.description}}</p>
               </div>
             </div>
-            <div class="col-lg-4">
-              <div class="call_box active">
-                <div class="call_image"><img src="{% static 'images/time-seat-icon.png' %}"></div>
-                <!-- feature is a database in Models.py -->
-                <h2 class="emergency_text">{{feature2.title}}</h2>
-                <h1 class="call_text">1-800-400-5768</h1>
-                <p class="dolor_text">{{feature2.description}}</p>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="call_box">
-                <div class="call_image"><img src="{% static 'images/watch-icon.png' %}"></div>
-                <h2 class="emergency_text">Opening hours</h2>
-                <h1 class="call_text">1-800-400-5768</h1>
-                <p class="dolor_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  </p>
-              </div>
-            </div>
+            {% endfor %}
           </div>
         </div>
       </div>

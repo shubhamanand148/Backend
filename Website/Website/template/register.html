@@ -1,0 +1,15 @@
+<h1>Sign Up Page</h1>
+
+<form method="Post" action="register">
+    {% csrf_token %}
+    <p>Username: </p>
+    <input type="text" name="username">
+    <p>Email ID: </p>
+    <input type="email" name="email id">
+    <p>Password: </p>
+    <input type="password" name="password">
+    <p>Re-enter Password: </p>
+    <input type="password" name="password2"></br>
+
+    <input type="submit">
+</form>

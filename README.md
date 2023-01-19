@@ -20,3 +20,4 @@ Website Navigation:
 
 If you are unable to loin into admin run: python manage.py createsuperuser
 
+Blog:

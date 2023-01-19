@@ -224,11 +224,11 @@
       <div class="services_section layout_padding">
         <div class="container">
           <div class="row">
+            <!-- Feature is a database in model.py file -->
             {% for feature in features %}
             <div class="col-lg-4">
               <div class="call_box">
                 <div class="call_image"><img src={% static feature.image %}></div>
-                <!-- Feature is a database in model.py file -->
                 <h2 class="emergency_text">{{feature.title}}</h2>
                 <h1 class="call_text">1-800-400-5768</h1>
                 <p class="dolor_text">{{feature.description}}</p>

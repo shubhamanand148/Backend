@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect
 from .models import Feature
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
-import voice_bot
 
 # Create your views here.
 def index(request):
@@ -83,3 +82,6 @@ def login(request):
 def logout(request):
     auth.logout(request)
     return redirect('/')
+
+def posts(request, pk):
+    return render(request, 'posts.html', {'pk': pk})

@@ -20,4 +20,6 @@ Website Navigation:
 
 If you are unable to loin into admin run: python manage.py createsuperuser
 
-Blog:
+**Blog:**
+It is a Website which has blog articles which are sorted on newest first basis.
+The data is stored in db.sqlite3 file which can be access in '/admin' site.

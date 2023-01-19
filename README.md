@@ -18,7 +18,7 @@ Website Navigation:
 4. '/logout': The logout page. This redirects users to Home page after logging out.
 5. '/admin': This is a defalut page created by django to manage users and database.
 
-If you are unable to loin into admin run: python manage.py createsuperuser
+If you are unable to login into admin run: python manage.py createsuperuser
 
 **Blog:**
 It is a Website which has blog articles which are sorted on newest first basis.

@@ -5,6 +5,8 @@
 This is a fullt function website project with Logout/login functionality, dynamic data(Some cards like Quick, Affordable, Always available)
 The user and data is stored in Postgresql.
 
+The skeleton for the dynamic data is in models.py file.
+
 To run the website:
 1. Open the folder containing manage.py in cmd.
 2. Run: python manage.py runserver

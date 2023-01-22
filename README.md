@@ -21,8 +21,13 @@ Website Navigation:
 If you are unable to login into admin run: python manage.py createsuperuser
 
 **Blog:**
+
 It is a Website which has blog articles which are sorted on newest first basis.
 The data is stored in db.sqlite3 file which can be access in '/admin' site.
 
+
+
 **Weather Website**
+
 It is a website which (POST) calls a weather API from OpenWeather and tells the temperature, humidity, pressure of a city.
+If no place is entered the webpage does not show any data and if invalid city is entered the website shows "No such city" message.
